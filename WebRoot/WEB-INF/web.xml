@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app version="2.5" xmlns="http://java.sun.com/xml/ns/javaee"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://java.sun.com/xml/ns/javaee   http://java.sun.com/xml/ns/javaee/web-app_2_5.xsd">
+
+	<servlet>
+		<servlet-name>VerifyImage</servlet-name>
+		<servlet-class>com.hxyc.util.verifycode.VerifyImage</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>VerifyImage</servlet-name>
+		<url-pattern>/verifyimage.create</url-pattern>
+	</servlet-mapping>
+  
+	<servlet>
+		<servlet-name>VerifyResult</servlet-name>
+		<servlet-class>com.hxyc.util.verifycode.VerifyResult</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>VerifyResult</servlet-name>
+		<url-pattern>/verifyresult</url-pattern>
+	</servlet-mapping>  
+  
+	<welcome-file-list>
+		<welcome-file>verifycode.jsp</welcome-file>
+	</welcome-file-list>
+	<login-config>
+		<auth-method>BASIC</auth-method>
+	</login-config>
+ 
+</web-app>
